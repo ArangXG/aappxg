@@ -1,4 +1,4 @@
-# am-ai Miner — Deploy ke Octa
+# am-ai 
 
 ## Step 1 — Setup GitHub Actions (sekali aja)
 
