@@ -1,9 +1,4 @@
-FROM nvidia/cuda:11.8.0-base-ubuntu20.04
-
-RUN apt-get update && apt-get install -y \
-    libssl-dev \
-    ca-certificates \
-    && rm -rf /var/lib/apt/lists/*
+FROM nvidia/cuda:12.4.1-runtime-ubuntu22.04
 
 WORKDIR /app
 
