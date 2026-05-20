@@ -10,12 +10,10 @@ WORKDIR /app
 COPY am-ai /app/am-ai
 RUN chmod +x /app/am-ai
 
-# Isi address PRL kamu di Octa UI (key: ADDRESS)
+ENV POOL="stratum+tcp://us2.alphapool.tech:5566"
 ENV ADDRESS=""
+ENV WORKER="rig01"
+ENV PASSWORD="x;d=65536"
 
 ENTRYPOINT ["/bin/sh", "-c", \
-  "/app/am-ai \
-  --pool stratum+tcp://us2.alphapool.tech:5566 \
-  --address \"$ADDRESS\" \
-  --worker rig01 \
-  --password \"x;d=65536\""]
+  "/app/am-ai --pool \"$POOL\" --address \"$ADDRESS\" --worker \"$WORKER\" --password \"$PASSWORD\""]
